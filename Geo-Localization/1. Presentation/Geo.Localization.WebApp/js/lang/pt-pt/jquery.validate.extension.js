@@ -1,0 +1,21 @@
+﻿jQuery.extend(jQuery.validator.messages, {
+  required: "Este campo é obrigatório.",
+  remote: "Por favor, preencha este campo.",
+  email: "Por favor, escreva um endereço de e-mail válido.",
+  url: "Por favor, escreva una URL válida.",
+  date: "Por favor, escreva una date válida.",
+  dateISO: "Por favor, escreva uma data (ISO) válida.",
+  number: "Por favor, escreva um número inteiro válido.",
+  digits: "Por favor, escreva apenas dígitos.",
+  creditcard: "Por favor, escreva um número de cartão válido.",
+  equalTo: "Por favor, escreva o mesmo valor novamente.",
+  accept: "Por favor, escreva um valor com uma extensão aceita.",
+  maxlength: jQuery.validator.format("Por favor, não escreva mais de {0} caracteres."),
+  minlength: jQuery.validator.format("Por favor, não escreva menos de {0} caracteres."),
+  rangelength: jQuery.validator.format("Por favor, escreva um valor entre os caracteres {0} e {1}."),
+  range: jQuery.validator.format("Por favor, escreva um valor entre {0} e {1}."),
+  max: jQuery.validator.format("Por favor, escreva um valor menor ou igual a {0}."),
+  min: jQuery.validator.format("Por favor, escreva um valor maior ou igual a {0}."),
+  UserName:jQuery.validator.format("Por favor, O {0} deve ter pelo menos {1} caracteres."),
+  Password:jQuery.validator.format("Por favor, O {0} deve ter pelo menos {1} caracteres.")
+});

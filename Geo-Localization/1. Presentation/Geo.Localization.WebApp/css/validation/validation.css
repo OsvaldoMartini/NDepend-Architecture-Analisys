@@ -1,0 +1,19 @@
+﻿<style>
+/*.container {
+    padding: 20px;
+}*/
+
+        .tooltip.has-error .tooltip-arrow {
+     left: 10px !important;
+     border-bottom-color: #a94442;
+ }
+
+.tooltip.has-error .tooltip-inner {
+    background: #a94442;
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 35px;
+}
+</style>

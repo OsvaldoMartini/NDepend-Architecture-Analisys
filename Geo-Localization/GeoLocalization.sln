@@ -1,0 +1,125 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{A49F789A-07C7-465F-93D3-8606BE509A59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Data", "3. Data", "{13643F43-E4D3-4BDE-8EBA-493EDD89B8DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Files", "Project Files", "{B34C8CDD-B200-40D6-8BB0-2F253B92062C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A29B839D-06A3-46EB-9C19-9797AF9A0F96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{70F71FC6-78AC-4CAC-805D-AE0AF6040023}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagrams", "Diagrams", "{E9595FF3-6260-4E35-B3FE-E56468849C2B}"
+	ProjectSection(SolutionItems) = preProject
+		Project Files\Diagrams\EABase.eap = Project Files\Diagrams\EABase.eap
+		Project Files\Diagrams\Sequence Comment.json = Project Files\Diagrams\Sequence Comment.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{38AE612B-1DFD-42DA-A146-73557FF544F2}"
+	ProjectSection(SolutionItems) = preProject
+		Project Files\Configurations\NLog.config = Project Files\Configurations\NLog.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{F5BB3ABC-A3DE-4F90-A9C3-42E90B0073C7}"
+	ProjectSection(SolutionItems) = preProject
+		Project Files\Assemblies\AutoMapper.dll = Project Files\Assemblies\AutoMapper.dll
+		Project Files\Assemblies\NLog.dll = Project Files\Assemblies\NLog.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySQL", "MySQL", "{62CF4D8C-8E94-465C-808B-BFA5484A2678}"
+	ProjectSection(SolutionItems) = preProject
+		Project Files\Scripts\MySQL\MySql.sql = Project Files\Scripts\MySQL\MySql.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Server", "SQL Server", "{95140E92-144D-4987-9BBB-6F9D4D29F2E6}"
+	ProjectSection(SolutionItems) = preProject
+		Project Files\Scripts\SQL Server\Book.sql = Project Files\Scripts\SQL Server\Book.sql
+		Project Files\Scripts\SQL Server\MySql.sql = Project Files\Scripts\SQL Server\MySql.sql
+		Project Files\Scripts\SQL Server\Script Geral.sql = Project Files\Scripts\SQL Server\Script Geral.sql
+		Project Files\Scripts\SQL Server\Script SQL Server.sql = Project Files\Scripts\SQL Server\Script SQL Server.sql
+		Project Files\Scripts\SQL Server\StoredProcedures.sql = Project Files\Scripts\SQL Server\StoredProcedures.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySQl.Net.v.5.2.7.0", "MySQl.Net.v.5.2.7.0", "{740E5DDB-07CC-4223-8266-4B04EACE6774}"
+	ProjectSection(SolutionItems) = preProject
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\CHANGES = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\CHANGES
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\COPYING = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\COPYING
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\EXCEPTIONS = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\EXCEPTIONS
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.data.cf.dll = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.data.cf.dll
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\MySql.Data.chm = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\MySql.Data.chm
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.data.dll = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.data.dll
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.visualstudio.dll = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.visualstudio.dll
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.web.dll = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\mysql.web.dll
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\README = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\README
+		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\Release Notes.txt = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\Release Notes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EE28C693-E9EA-4D10-82D5-43F2CDBA65D4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.WebApp", "1. Presentation\Geo.Localization.WebApp\Geo.Localization.WebApp.csproj", "{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Service", "2. Service", "{51F97C41-42EE-43BB-8A3F-C3E12E457010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.Services", "2. Service\Geo.Localization.Services\Geo.Localization.Services.csproj", "{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.Data", "3. Data\Geo.Localization.Data\Geo.Localization.Data.csproj", "{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.SelleniumTest", "Tests\Geo.Localization.SelleniumTest\Geo.Localization.SelleniumTest.csproj", "{6B30BF96-5533-49A6-BB4F-22F16E2B73A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.Test", "Tests\Geo.Localization.Test\Geo.Localization.Test.csproj", "{8756900D-5F6F-491B-AB87-2743B43DA3F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B30BF96-5533-49A6-BB4F-22F16E2B73A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B30BF96-5533-49A6-BB4F-22F16E2B73A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B30BF96-5533-49A6-BB4F-22F16E2B73A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B30BF96-5533-49A6-BB4F-22F16E2B73A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70F71FC6-78AC-4CAC-805D-AE0AF6040023} = {B34C8CDD-B200-40D6-8BB0-2F253B92062C}
+		{E9595FF3-6260-4E35-B3FE-E56468849C2B} = {B34C8CDD-B200-40D6-8BB0-2F253B92062C}
+		{38AE612B-1DFD-42DA-A146-73557FF544F2} = {B34C8CDD-B200-40D6-8BB0-2F253B92062C}
+		{F5BB3ABC-A3DE-4F90-A9C3-42E90B0073C7} = {B34C8CDD-B200-40D6-8BB0-2F253B92062C}
+		{62CF4D8C-8E94-465C-808B-BFA5484A2678} = {70F71FC6-78AC-4CAC-805D-AE0AF6040023}
+		{95140E92-144D-4987-9BBB-6F9D4D29F2E6} = {70F71FC6-78AC-4CAC-805D-AE0AF6040023}
+		{740E5DDB-07CC-4223-8266-4B04EACE6774} = {F5BB3ABC-A3DE-4F90-A9C3-42E90B0073C7}
+		{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE} = {A49F789A-07C7-465F-93D3-8606BE509A59}
+		{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC} = {51F97C41-42EE-43BB-8A3F-C3E12E457010}
+		{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887} = {13643F43-E4D3-4BDE-8EBA-493EDD89B8DD}
+		{6B30BF96-5533-49A6-BB4F-22F16E2B73A8} = {A29B839D-06A3-46EB-9C19-9797AF9A0F96}
+		{8756900D-5F6F-491B-AB87-2743B43DA3F8} = {A29B839D-06A3-46EB-9C19-9797AF9A0F96}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72E69D80-FFCE-4F4E-898C-621D47EA9F13}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+﻿@using System.Security.Policy
+@using Geo.Localization.WebApp.Extensions
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+            @Html.ActionLink(ROffice.CompanyName, "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
+            </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="login">
+                    @{ Html.RenderAction("ButtonLoginPage", "BaseButtons"); }
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @{ Html.RenderAction("AccesOnlyAuthorized", "BaseButtons"); }
+                @{ Html.RenderAction("AllowedButtons", "BaseButtons"); }
+            </ul>
+            <ul class="langs" style="list-style:none;">
+                <li style="display:inline;">
+                    <a href="" class="setLang" data-lang="pt-pt">
+                        <img src="@Url.GetImage("Portugal-Flag-icon-24.png", false)" />
+                    </a>
+                </li>
+                <li style="display:inline;">
+                    <a href="" class="setLang" data-lang="en-gb"><img src="@Url.GetImage("United-Kingdom-flag-icon-24.png", false)" /></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

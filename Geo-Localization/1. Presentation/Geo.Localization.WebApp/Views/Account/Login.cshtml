@@ -1,0 +1,125 @@
+﻿@using Geo.Localization.Services.Texts
+@using Geo.Localization.WebApp.Extensions
+@using Geo.Localization.WebApp.Helpers
+@model Geo.Localization.WebApp.Models.LoginModel
+
+@{
+    ViewBag.Title = RGlobal.LogIn;
+}
+
+@section css{
+    <style>
+        /*.container {
+        padding: 20px;
+        }*/
+
+        .tooltip.has-error .tooltip-arrow {
+            left: 10px !important;
+            border-bottom-color: #a94442;
+        }
+
+        .tooltip.has-error .tooltip-inner {
+            background: #a94442;
+            max-width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 35px;
+        }
+    </style>
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/angular")
+    <script src=@Url.Content("~/Scripts/jquery.maskedinput.js")></script>
+    <script src=@Url.Content("~/js/app/app.validation.js")></script>
+    <script src=@Url.Content("~/js/controllers/LoginComponent.js")></script>
+
+    <script>
+        if (isEmpty(lang)) {
+
+            document.write('<script src=' + appPathAppName + '/Scripts/i18n/angular-locale_en-gb.js><\/script>');
+        } else {
+            document.write('<script src=' +
+                appPathAppName +
+                '/Scripts/i18n/angular-locale_' +
+                lang.toLowerCase() +
+                '.js><\/script>');
+        }
+    </script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">@RGlobal.LoginPage</h1>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink(RGlobal.GeoLocalization, "Index", "Home")</li>
+                <li class="active">@RGlobal.RedirectToGeoLoc</li>
+            </ol>
+        </div>
+        <div class="col-sm-8">
+            <h3>@Html.Raw(ROffice.CompanyNameMore)</h3>
+            <p>@RGlobal.LoginMessage</p>
+            
+            <div ng-app="geoLocApp">
+                @*@using (Html.BeginForm("SendData", "Home", FormMethod.Post, new { id = "formLogin"}))*@
+                <form>
+                    @*<body ng-controller="geoLocController">*@
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.UserName, new { @class = "control-label" })
+                                @Html.TextBoxFor(m => m.UserName, new { type = "text", @class = "form-control", placeholder = RGlobal.UserName, name = "UserName", required = "required", pattern = "^[a-zA-Z ]{3,30}$", pattern_notification = RValidation.Names }) @*ng_model = "UserName"*@ 
+                             </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+                                @Html.TextBoxFor(m => m.Password, new { type = "password", @class = "form-control", placeholder = RGlobal.Password, name = "Password", required = "required", pattern = @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$", pattern_notification = RValidation.Password}) @*ng_model = "Password"*@ 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <input type="hidden" value="login" name="save">
+                            @{ Html.RenderAction("ButtonLogin", "BaseButtons"); }
+                        </div>
+                    </div>
+                    @*</body>*@
+                </form>
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <h4>@Html.Raw(RGlobal.ProjectWServicesSubheading)</h4>
+            <p>
+                @ROffice.AddressRoad<br>
+                @ROffice.AddressStateAndCode<br>
+            </p>
+            <p><i class="fa fa-phone"></i> <abbr title="Phone">@RGlobal.Phone</abbr>: @ROffice.PhoneNumber</p>
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:feedback@wservices.co.uk">@ROffice.EmailAddress</a></p>
+
+            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: @ROffice.HoursWork</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link"><a title="Facebook" data-placement="top" data-toggle="tooltip" href="#facebook-page"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li class="tooltip-social linkedin-link"><a title="LinkedIn" data-placement="top" data-toggle="tooltip" href="#linkedin-company-page"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                <li class="tooltip-social twitter-link"><a title="Twitter" data-placement="top" data-toggle="tooltip" href="#twitter-profile"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li class="tooltip-social google-plus-link"><a title="Google+" data-placement="top" data-toggle="tooltip" href="#google-plus-page"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div><!-- /.row -->
+</div>
+
+
+
+
+@Scripts.Render("~/bundles/jqueryval")
+@if (GlobalHelper.DefaultCulture != GlobalHelper.CurrentCulture)
+{
+    <script src="@Url.GetScript("jquery.validate.extension.js")" defer></script>
+}
+
+<script>
+    LoginLoadFunctions();
+</script>

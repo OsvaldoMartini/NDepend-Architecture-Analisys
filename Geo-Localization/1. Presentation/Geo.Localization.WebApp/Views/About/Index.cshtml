@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">@RGlobal.About</h1>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink(RGlobal.LoginPage, "Login", "Account")</li>
+                <li class="active">@RGlobal.RedirectToLogin</li>
+            </ol>
+        </div>
+    </div> <!-- /.row -->
+
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Embedded and Google Maps (No key needed) -->
+            <iframe id="mapFrame" width="100%" scrolling="no" height="400px" frameborder="0" src="@Html.Raw(Url.GetGeoUrlLocation())" marginwidth="0" marginheight="0"></iframe>
+        </div>
+        <div class="col-md-4">
+            <h4>@Html.Raw(RGlobal.ProjectWServicesSubheading)</h4>
+            <p>
+                @ROffice.AddressRoad<br>
+                @ROffice.AddressStateAndCode<br>
+            </p>
+            <p><i class="fa fa-phone"></i> <abbr title="Phone">@RGlobal.Phone</abbr>: @ROffice.PhoneNumber</p>
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:feedback@wservices.co.uk">@ROffice.EmailAddress</a></p>
+
+            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: @ROffice.HoursWork</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link"><a title="Facebook" data-placement="top" data-toggle="tooltip" href="#facebook-page"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li class="tooltip-social linkedin-link"><a title="LinkedIn" data-placement="top" data-toggle="tooltip" href="#linkedin-company-page"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                <li class="tooltip-social twitter-link"><a title="Twitter" data-placement="top" data-toggle="tooltip" href="#twitter-profile"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li class="tooltip-social google-plus-link"><a title="Google+" data-placement="top" data-toggle="tooltip" href="#google-plus-page"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">@RGlobal.About Google API</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="@Url.GetImage("about_geoloc.png", false)" class="img-responsive">
+            </div>
+            <div class="col-md-6">
+                <h2><a href="https://en.wikipedia.org/wiki/Google_APIs">Google Api(wiki)</a></h2>
+                <p>@RGlobal.GloogleAPI</p>
+            </div>
+        </div><!-- /.row -->
+
+    </div>
+</div>
