@@ -100,7 +100,7 @@ ALTER TABLE GeoLocalization ADD CONSTRAINT FK_GeoLocalizationToEmployee
 
 
 INSERT INTO `Company` (`Name`,`Address`,`PostCode`,`State`,`Country`,`Email`,`WebSite`,`Phone`,`DateCreated`) 
-VALUES('W. Services','W. Services Global Headquarters Receptionist','W1W','Croydon','United Kingdom','osvaldo.martini@gmail.com  ','osvaldo.martini@gmail.com  ', '+44 (0)7951 144 116', CURRENT_TIMESTAMP());
+VALUES('WServices','W. Services Global Headquarters Receptionist','W1W','London','United Kingdom','osvaldo.martini@gmail.com  ','osvaldo.martini@gmail.com  ', '+44 (0)7951 144 116', CURRENT_TIMESTAMP());
 
 INSERT INTO `Employee` (`CompanyID`,`LastName`,`FirstName`,`UserName`,`Email`,`Password`,`RoleID`,`DateCreated`) VALUES(1, 'admin','Adm','Admin','admin@gmail.com','admin', 1, CURRENT_TIMESTAMP());
 INSERT INTO `Employee` (`CompanyID`,`LastName`,`FirstName`,`UserName`,`Email`,`Password`,`RoleID`,`DateCreated`) VALUES(1, 'Martini','Osvaldo','Omartini','osvaldo.martini@gmail.com','martini', 1, CURRENT_TIMESTAMP());
