@@ -245,8 +245,8 @@ CREATE DEFINER=`databaseName`@`%` PROCEDURE `PROC_UPDATE_GEOLOCALIZATION` (
 in P_GeoLocalizationID int,
 in P_EmployeeID int ,
 in P_LocalName varchar(100) ,
-in P_Latitude varchar(30) ,
-in P_Longitude varchar(30) ,
+in P_Lat varchar(30) ,
+in P_Long varchar(30) ,
 out P_Return_Message varchar(500) 
 )
 BEGIN
@@ -261,8 +261,8 @@ start transaction;
     
 		UPDATE GeoLocalization 
 			SET LocalName = ifnull(P_LocalName, LocalName )
-            ,Lat = ifnull(P_Latitude, Lat )
-		    ,Lng = ifnull(P_Longitude, Lng )
+            ,Lat = ifnull(P_Lat, Lat )
+		    ,Lng = ifnull(P_Long, Lng )
 		   where
 				GeoLocalizationID = P_GeoLocalizationID
 			and EmployeeID = P_EmployeeID;
@@ -281,8 +281,8 @@ DELIMITER $$
 CREATE DEFINER=`databaseName`@`%` PROCEDURE `PROC_INSERT_GEOLOCALIZATION` (
 in P_EmployeeID int,
 in P_LocalName varchar(100),
-in P_Longitude varchar(30) ,
-in P_Latitude varchar(30) ,
+in P_Long varchar(30) ,
+in P_Lat varchar(30) ,
 out P_int_Identity int ,
 out P_Return_Message varchar(500)
 )
@@ -306,8 +306,8 @@ start transaction;
 			VALUES (
 			P_EmployeeID
 			,P_LocalName
-			,P_Latitude
-            ,P_Longitude
+			,P_Lat
+            ,P_Long
 		    ,CURRENT_TIMESTAMP()
 			);
 			
