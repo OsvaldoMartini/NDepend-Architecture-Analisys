@@ -28,6 +28,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 /****** Object:  Table Company    Script Date: 08/07/2017 09:07:02 ******/
 CREATE TABLE Company(
 	CompanyID int AUTO_INCREMENT NOT NULL,
+	CompanyType varchar(100) NOT NULL,
 	Name varchar(100) NOT NULL,
 	Address varchar(250) NOT NULL,
 	PostCode varchar(10) NOT NULL,
@@ -99,8 +100,8 @@ ALTER TABLE GeoLocalization ADD CONSTRAINT FK_GeoLocalizationToEmployee
 */
 
 
-INSERT INTO `Company` (`Name`,`Address`,`PostCode`,`State`,`Country`,`Email`,`WebSite`,`Phone`,`DateCreated`) 
-VALUES('WServices','W. Services Global Headquarters Receptionist','W1W','London','United Kingdom','osvaldo.martini@gmail.com  ','osvaldo.martini@gmail.com  ', '+44 (0)7951 144 116', CURRENT_TIMESTAMP());
+INSERT INTO `Company` (`CompanyType`,`Name`,`Address`,`PostCode`,`State`,`Country`,`Email`,`WebSite`,`Phone`,`DateCreated`) 
+VALUES('IT Services','WServices','W. Services Global Headquarters Receptionist','W1W','London','United Kingdom','osvaldo.martini@gmail.com  ','osvaldo.martini@gmail.com  ', '+44 (0)7951 144 116', CURRENT_TIMESTAMP());
 
 INSERT INTO `Employee` (`CompanyID`,`LastName`,`FirstName`,`UserName`,`Email`,`Password`,`RoleID`,`DateCreated`) VALUES(1, 'admin','Adm','Admin','admin@gmail.com','admin', 1, CURRENT_TIMESTAMP());
 INSERT INTO `Employee` (`CompanyID`,`LastName`,`FirstName`,`UserName`,`Email`,`Password`,`RoleID`,`DateCreated`) VALUES(1, 'Martini','Osvaldo','Omartini','osvaldo.martini@gmail.com','martini', 1, CURRENT_TIMESTAMP());
