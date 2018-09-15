@@ -103,7 +103,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\2. Service\Geo.Localization.Services\Geo.Localization.Services.csproj">
       <Project>{b49a7803-21fe-4806-afe3-2c21dd3bb9bc}</Project>
-      <Name>IHS.Markit.Services</Name>
+      <Name>Geo.Localization.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\3. Data\Geo.Localization.Data\Geo.Localization.Data.csproj">
       <Project>{4ae21e2c-c5b1-4bf5-bce2-8fafc0ab2887}</Project>

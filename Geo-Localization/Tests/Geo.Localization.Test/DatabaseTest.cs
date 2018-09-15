@@ -15,7 +15,8 @@ namespace Geo.Localization.SelleniumTest
     public class DatabaseTest
     {
         private static IEmployeeService ServiceEmployee { get; set; }
-        private static ICompanyService CompanyService { get; set; }   
+        private static ICompanyService CompanyService { get; set; }
+        private static IGeoLocalizationService GeoLocalizationService { get; set; }
 
         //Inicialização dentro dos Testes	
         [ClassInitialize]
@@ -23,10 +24,11 @@ namespace Geo.Localization.SelleniumTest
         {
             ServiceEmployee = EmployeeService.Instance();
             CompanyService = new CompanyService();
+            GeoLocalizationService = new GeoLocalizationService();
         }
 
 
-        
+
         [TestMethod]
         public void EmployeeInsert()
         {
@@ -186,6 +188,25 @@ namespace Geo.Localization.SelleniumTest
 
         }
         #endregion
+
+        #region GeoLocalization Insert
+
+        [TestMethod]
+        public void Test_GeoLocalization_Insert()
+        {
+            GeoLocalizationDto geoLocal = new GeoLocalizationDto() {CompanyID = 1, EmployeeID = 1, Lat = "51.522483", Lng = "-0.125034",LocalName = "Russel Square"};
+            try
+            {
+                GeoLocalizationService.InsertGeoLocalization(geoLocal);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"MySql Error: {ex.Message}");
+            }
+        }
+        #endregion
+
+
     }
 
 }

@@ -37,9 +37,6 @@
     <Reference Include="AutoMapper">
       <HintPath>..\..\Project Files\Assemblies\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="PagedList">
-      <HintPath>..\..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,9 +53,12 @@
     <Compile Include="DataTransferObject\CompanyDto.cs" />
     <Compile Include="DataTransferObject\EmployeeDto.cs" />
     <Compile Include="DataTransferObject\GeoLocalizationDto.cs" />
+    <Compile Include="DataTransferObject\CompanySalesDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContrat\ICompanySalesService.cs" />
     <Compile Include="ServiceContrat\ICompanyService.cs" />
     <Compile Include="ServiceContrat\IEmployeeService.cs" />
+    <Compile Include="ServiceImplementation\CompanySalesService.cs" />
     <Compile Include="ServiceImplementation\CompanyService.cs" />
     <Compile Include="ServiceImplementation\EmployeeService.cs" />
     <Compile Include="ServiceImplementation\GeoLocalizationService.cs" />

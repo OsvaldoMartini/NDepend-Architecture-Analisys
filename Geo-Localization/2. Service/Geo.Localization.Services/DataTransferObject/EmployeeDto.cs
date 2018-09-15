@@ -10,6 +10,7 @@ namespace Geo.Localization.Services.DataTransferObject
     {
         public EmployeeDto()
         {
+            this.TCompany = new CompanyDto();
         }
 
         [DataMember]

@@ -14,6 +14,7 @@ namespace Geo.Localization.Services.DataTransferObject
 
         [DataMember]
         public int GeoLocalizationID { get; set; }
+
         [DataMember]
         public int EmployeeID { get; set; }
         
@@ -27,6 +28,7 @@ namespace Geo.Localization.Services.DataTransferObject
         [StringLength(20, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Lat")]
         public string Lat { get; set; }
+
         [Required]
         [StringLength(20, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Lng")]

@@ -48,7 +48,9 @@ namespace Geo.Localization.Services.ServiceImplementation
 
         public IList<EmployeeDto> GetAllEmployee(EmployeeDto employee)
         {
-            return Mapper.Map<IList<EmployeeEntity>, IList<EmployeeDto>>(_employeeRepository.GetAllByCompany(Mapper.Map<EmployeeDto, EmployeeEntity>(employee)).ToList());
+            var employeeList = _employeeRepository.GetAllByCompany(Mapper.Map<EmployeeDto, EmployeeEntity>(employee));
+
+            return Mapper.Map<IList<EmployeeEntity>, IList<EmployeeDto>>(employeeList.ToList());
         }
 
         public void UpdateEmployee(EmployeeDto employee)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{A49F789A-07C7-465F-93D3-8606BE509A59}"
 EndProject
@@ -35,15 +35,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySQL", "MySQL", "{62CF4D8C
 		Project Files\Scripts\MySQL\MySql.sql = Project Files\Scripts\MySQL\MySql.sql
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Server", "SQL Server", "{95140E92-144D-4987-9BBB-6F9D4D29F2E6}"
-	ProjectSection(SolutionItems) = preProject
-		Project Files\Scripts\SQL Server\Book.sql = Project Files\Scripts\SQL Server\Book.sql
-		Project Files\Scripts\SQL Server\MySql.sql = Project Files\Scripts\SQL Server\MySql.sql
-		Project Files\Scripts\SQL Server\Script Geral.sql = Project Files\Scripts\SQL Server\Script Geral.sql
-		Project Files\Scripts\SQL Server\Script SQL Server.sql = Project Files\Scripts\SQL Server\Script SQL Server.sql
-		Project Files\Scripts\SQL Server\StoredProcedures.sql = Project Files\Scripts\SQL Server\StoredProcedures.sql
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySQl.Net.v.5.2.7.0", "MySQl.Net.v.5.2.7.0", "{740E5DDB-07CC-4223-8266-4B04EACE6774}"
 	ProjectSection(SolutionItems) = preProject
 		Project Files\Assemblies\MySQl.Net.v.5.2.7.0\CHANGES = Project Files\Assemblies\MySQl.Net.v.5.2.7.0\CHANGES
@@ -75,6 +66,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.SelleniumT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.Test", "Tests\Geo.Localization.Test\Geo.Localization.Test.csproj", "{8756900D-5F6F-491B-AB87-2743B43DA3F8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Hosts", "4. Hosts", "{FF03284E-AAD3-4690-97F1-7AA01A61525F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.WCF.Host", "4. Hosts\Geo.Localization.WCF.Hosts\Geo.Localization.WCF.Host.csproj", "{30187D3F-919C-4E97-890E-6A620793F198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Localization.WCF.Services", "4. Hosts\Geo.Localization.WCF.Services\Geo.Localization.WCF.Services.csproj", "{9C9F9BC5-FF12-4793-AAA4-94A381865C3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +98,14 @@ Global
 		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8756900D-5F6F-491B-AB87-2743B43DA3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30187D3F-919C-4E97-890E-6A620793F198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30187D3F-919C-4E97-890E-6A620793F198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30187D3F-919C-4E97-890E-6A620793F198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30187D3F-919C-4E97-890E-6A620793F198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9F9BC5-FF12-4793-AAA4-94A381865C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9F9BC5-FF12-4793-AAA4-94A381865C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9F9BC5-FF12-4793-AAA4-94A381865C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9F9BC5-FF12-4793-AAA4-94A381865C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,13 +116,14 @@ Global
 		{38AE612B-1DFD-42DA-A146-73557FF544F2} = {B34C8CDD-B200-40D6-8BB0-2F253B92062C}
 		{F5BB3ABC-A3DE-4F90-A9C3-42E90B0073C7} = {B34C8CDD-B200-40D6-8BB0-2F253B92062C}
 		{62CF4D8C-8E94-465C-808B-BFA5484A2678} = {70F71FC6-78AC-4CAC-805D-AE0AF6040023}
-		{95140E92-144D-4987-9BBB-6F9D4D29F2E6} = {70F71FC6-78AC-4CAC-805D-AE0AF6040023}
 		{740E5DDB-07CC-4223-8266-4B04EACE6774} = {F5BB3ABC-A3DE-4F90-A9C3-42E90B0073C7}
 		{3FF8E504-D82F-43EF-AFBB-CAA19AFDE7FE} = {A49F789A-07C7-465F-93D3-8606BE509A59}
 		{B49A7803-21FE-4806-AFE3-2C21DD3BB9BC} = {51F97C41-42EE-43BB-8A3F-C3E12E457010}
 		{4AE21E2C-C5B1-4BF5-BCE2-8FAFC0AB2887} = {13643F43-E4D3-4BDE-8EBA-493EDD89B8DD}
 		{6B30BF96-5533-49A6-BB4F-22F16E2B73A8} = {A29B839D-06A3-46EB-9C19-9797AF9A0F96}
 		{8756900D-5F6F-491B-AB87-2743B43DA3F8} = {A29B839D-06A3-46EB-9C19-9797AF9A0F96}
+		{30187D3F-919C-4E97-890E-6A620793F198} = {FF03284E-AAD3-4690-97F1-7AA01A61525F}
+		{9C9F9BC5-FF12-4793-AAA4-94A381865C3D} = {FF03284E-AAD3-4690-97F1-7AA01A61525F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72E69D80-FFCE-4F4E-898C-621D47EA9F13}

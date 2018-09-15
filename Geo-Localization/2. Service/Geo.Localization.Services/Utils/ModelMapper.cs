@@ -43,10 +43,6 @@ namespace Geo.Localization.Services.Utils
 
                     #endregion
 
-
-
-
-
                     #region [ Employee ]
 
                     Mapper.CreateMap<EmployeeDto, EmployeeEntity>();
@@ -59,6 +55,24 @@ namespace Geo.Localization.Services.Utils
                     Mapper.CreateMap<IEnumerable<EmployeeEntity>, IEnumerable<EmployeeDto>>();
                     Mapper.CreateMap<IEnumerable<EmployeeDto>, IEnumerable<EmployeeEntity>>();
 
+                    #endregion
+
+                   #region [ CompanySales ]
+
+                    Mapper.CreateMap<CompanySalesDto, CompanySalesEntity>()
+                        .ForMember(dest => dest.TCompany,
+                            opt => opt.MapFrom(src => src.TCompany));
+
+                    Mapper.CreateMap<CompanySalesEntity, CompanySalesDto>()
+                        .ForMember(dest => dest.CompanySalesList,
+                            opt => opt.MapFrom<ICollection<CompanySalesEntity>>(src => src.CompanySalesList))
+                        .ForMember(dest => dest.TCompany,
+                            opt => opt.MapFrom(src => src.TCompany))
+                        .ForMember(dest => dest.RoleName, opt => opt.Ignore())
+                        .ForMember(dest => dest.NameUserRole, opt => opt.Ignore());
+
+                    Mapper.CreateMap<IEnumerable<CompanySalesEntity>, IEnumerable<CompanySalesDto>>();
+                    Mapper.CreateMap<IEnumerable<CompanySalesDto>, IEnumerable<CompanySalesEntity>>();
                     #endregion
 
 

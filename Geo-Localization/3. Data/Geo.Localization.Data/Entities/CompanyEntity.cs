@@ -12,6 +12,7 @@ namespace Geo.Localization.Data
         }
 
         public int CompanyID { get; set; }
+        public string CompanyType { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string PostCode { get; set; }

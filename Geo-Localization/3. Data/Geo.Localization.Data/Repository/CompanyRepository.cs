@@ -20,6 +20,7 @@ namespace Geo.Localization.Data.Repository
                 {
 
                     dataCommand.CommandText = "SELECT CompanyID" +
+                                              ",CompanyType"+
                                               ",Name " +
                                               ",Address " +
                                               ",PostCode" +
