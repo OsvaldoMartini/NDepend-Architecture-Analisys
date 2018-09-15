@@ -71,8 +71,8 @@ namespace Geo.Localization.Services.Utils
                         .ForMember(dest => dest.RoleName, opt => opt.Ignore())
                         .ForMember(dest => dest.NameUserRole, opt => opt.Ignore());
 
-                    Mapper.CreateMap<IEnumerable<CompanySalesEntity>, IEnumerable<CompanySalesDto>>();
-                    Mapper.CreateMap<IEnumerable<CompanySalesDto>, IEnumerable<CompanySalesEntity>>();
+                    Mapper.CreateMap<IList<CompanySalesEntity>, IList<CompanySalesDto>>();
+                    Mapper.CreateMap<IList<CompanySalesDto>, IList<CompanySalesEntity>>();
                     #endregion
 
 

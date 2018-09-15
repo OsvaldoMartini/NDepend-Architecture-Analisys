@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using Geo.Localization.Services.DataTransferObject;
 
 namespace Geo.Localization.WCF.Services
@@ -10,35 +10,12 @@ namespace Geo.Localization.WCF.Services
     public interface ICompanyWcfServices
     {
         [OperationContract]
+        [WebGet]
         string GetData(int value);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        //[OperationContract]
-        //IList<CompanySalesDto> Backend(string sector);
+        [WebGet(UriTemplate = "Backend/{*sector}", ResponseFormat = WebMessageFormat.Json)]
+        List<CompanySalesDto> Backend(string sector);
     }
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "Geo.Localization.WCFService.ContractType".
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
 }

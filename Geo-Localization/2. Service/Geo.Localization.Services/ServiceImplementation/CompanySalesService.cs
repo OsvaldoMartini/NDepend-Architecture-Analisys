@@ -8,6 +8,7 @@ using Geo.Localization.Data.IRepository;
 using Geo.Localization.Data.Repository;
 using Geo.Localization.Services.DataTransferObject;
 using Geo.Localization.Services.ServiceContrat;
+using Geo.Localization.Services.Utils;
 
 namespace Geo.Localization.Services.ServiceImplementation
 {
@@ -24,9 +25,9 @@ namespace Geo.Localization.Services.ServiceImplementation
         public CompanySalesService()
         {
             //Mapper DTOs -> BOs  and BOs -> DTOS
-            Mapper.CreateMap<CompanySalesDto, CompanySalesEntity>();
-            Mapper.CreateMap<CompanySalesEntity, CompanySalesDto>();
-
+            //Mapper.CreateMap<CompanySalesDto, CompanySalesEntity>();
+            //Mapper.CreateMap<CompanySalesEntity, CompanySalesDto>();
+            ModelMapper.Configure();
             _companySalesRepository = new CompanySalesRepository();
         }
 
@@ -47,11 +48,11 @@ namespace Geo.Localization.Services.ServiceImplementation
             // free native resources if there are any.
         }
 
-        public IList<CompanySalesDto> GetCompanySaleByType(string typeCompany)
+        public List<CompanySalesDto> GetCompanySaleByType(string typeCompany)
         {
-            var companiesSales = _companySalesRepository.GetCorpSalesByType(typeCompany);
+            List<CompanySalesEntity> companiesSales = _companySalesRepository.GetCorpSalesByType(typeCompany);
 
-            return Mapper.Map<IList<CompanySalesEntity>, IList<CompanySalesDto>>(companiesSales.ToList());
+            return Mapper.Map<List<CompanySalesEntity>, List<CompanySalesDto>>(companiesSales);
             
             //return Mapper.Map<CompanySalesEntity, CompanySalesDto > (companiesSales);
         }

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 
 namespace Geo.Localization.Services.DataTransferObject
 {
-    [DataContract(Name = "MegaCorpSales")]
+    [DataContract(Name = "CompanySales")]
     public class CompanySalesDto : BaseAccessDto
     {
         public CompanySalesDto()
