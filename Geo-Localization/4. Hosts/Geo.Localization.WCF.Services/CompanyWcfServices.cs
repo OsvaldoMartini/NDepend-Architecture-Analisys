@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
+using System.Threading;
 using Geo.Localization.Services.DataTransferObject;
 using Geo.Localization.Services.ServiceImplementation;
 
@@ -10,6 +12,10 @@ namespace Geo.Localization.WCF.Services
     {
         public CompanyWcfServices()
         {
+            CultureInfo ci = new CultureInfo("en-US", false);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+
             Debug.WriteLine("CompanyWcfServices Passed in Contructor.");
         }
 
@@ -22,7 +28,10 @@ namespace Geo.Localization.WCF.Services
         public List<CompanySalesDto> Backend(string sector)
         {
             CompanySalesService _companySalesService = new CompanySalesService();
-            return _companySalesService.GetCompanySaleByType(sector);
+
+            var companySales = _companySalesService.GetCompanySaleByType(sector);
+
+            return companySales;
         }
     }
 }

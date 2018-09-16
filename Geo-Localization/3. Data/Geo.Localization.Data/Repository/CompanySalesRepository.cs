@@ -31,7 +31,7 @@ namespace Geo.Localization.Data.Repository
 
              var companies = new int[] { 1, 2, 3, 4, 5 };
 
-            if (!string.IsNullOrEmpty(typeCompany))
+            if (!string.IsNullOrEmpty(typeCompany) && typeCompany != "all")
              {
                  List<CompanyEntity> list = listCompanies.Where(v => v.CompanyType.Equals(typeCompany)).ToList();
                  if (list.Count == 0)
@@ -106,7 +106,7 @@ namespace Geo.Localization.Data.Repository
                  {
                      CompanySalesID = 35 - loop + 1,
                      Year = yearRange,
-                     Month = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(monthRange),
+                     Month = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(monthRange),
                      Sales = salesRange,
                      DateCreated = DateTime.Now.AddYears(-5),
                      TCompany = listCompanies[companyRange-1]

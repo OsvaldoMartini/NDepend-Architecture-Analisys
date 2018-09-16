@@ -14,7 +14,7 @@ namespace Geo.Localization.WCF.Services
         string GetData(int value);
 
         [OperationContract]
-        [WebGet(UriTemplate = "Backend/{*sector}", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "Backend/{*sector}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<CompanySalesDto> Backend(string sector);
     }
 
