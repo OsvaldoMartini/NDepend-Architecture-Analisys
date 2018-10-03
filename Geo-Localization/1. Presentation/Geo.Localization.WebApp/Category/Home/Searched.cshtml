@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = RGlobal.Searched;
+}
+
+
+@section css{
+    <link href=@Url.Content("~/css/themes/base/jquery-ui.css") rel="stylesheet" />
+    <link href=@Url.Content("~/css/jquery.jqGrid/ui.jqgrid.css") rel="stylesheet" />
+
+    <style>
+        /*.container {
+         padding: 20px;
+         }*/
+
+        .tooltip.has-error .tooltip-arrow {
+            left: 10px !important;
+            border-bottom-color: #a94442;
+        }
+
+        .tooltip.has-error .tooltip-inner {
+            background: #a94442;
+            max-width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 35px;
+        }
+
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        #description {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+
+        .form-control {
+            min-width: 0;
+            width: 600px !important;
+            color: #4d90fe;
+        }
+    </style>
+
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/angular")
+    <script src=@Url.Content("~/Scripts/jquery-ui-1.10.0.js")></script>
+    <script src=@Url.Content("~/js/controllers/GeoLocalizationComponent.js")></script>
+    <script src=@Url.Content("~/js/gridconstructors/GridLocalsSearched.js")></script>
+
+    <script>
+
+
+        if (isEmpty(lang)) {
+            document.write('<script src=' + appPathAppName + '/Scripts/i18n/angular-locale_en-us.js><\/script>');
+            document.write('<script src=' + appPathAppName + '/Scripts/i18n/grid.locale-en.js><\/script>');
+        } else {
+            document.write('<script src=' +
+                appPathAppName +
+                '/Scripts/i18n/angular-locale_' +
+                lang.toLowerCase() +
+                '.js><\/script>');
+
+            //JqGrid needs of locale language
+            var langSplit = lang.split("-");
+            document.write('<script src=' +
+                appPathAppName +
+                '/Scripts/i18n/grid.locale-' +
+                langSplit[0] +
+                '.js><\/script>');
+
+            
+        }
+
+    </script>
+    
+    <script src=@Url.Content("~/Scripts/jquery.jqGrid.js")></script>
+
+  
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">@RGlobal.Searched</h1>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink(RGlobal.LoginPage, "Login", "Account")</li>
+                <li class="active">@RGlobal.RedirectToLogin</li>
+            </ol>
+        </div>
+        <body>
+            <p>
+                Please see table below:
+            </p>
+            <div>
+                <table id="GridLocals"></table>
+                <div id="pager"></div>
+            </div>
+        </body>
+
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-8">
+            @*<h3>@RGlobal.Searched</h3>*@
+
+            <div>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <h3>@Html.Raw(ROffice.CompanyNameMore)</h3>
+            <h4>@Html.Raw(RGlobal.ProjectWServicesSubheading)</h4>
+            <p>
+                @ROffice.AddressRoad<br>
+                @ROffice.AddressStateAndCode<br>
+            </p>
+            <p><i class="fa fa-phone"></i> <abbr title="Phone">@RGlobal.Phone</abbr>: @ROffice.PhoneNumber</p>
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:feedback@wservices.co.uk">@ROffice.EmailAddress</a></p>
+
+            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: @ROffice.HoursWork</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link"><a title="Facebook" data-placement="top" data-toggle="tooltip" href="#facebook-page"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li class="tooltip-social linkedin-link"><a title="LinkedIn" data-placement="top" data-toggle="tooltip" href="#linkedin-company-page"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                <li class="tooltip-social twitter-link"><a title="Twitter" data-placement="top" data-toggle="tooltip" href="#twitter-profile"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li class="tooltip-social google-plus-link"><a title="Google+" data-placement="top" data-toggle="tooltip" href="#google-plus-page"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div><!-- /.row -->
+</div>
+
+
+
+@Scripts.Render("~/bundles/jqueryval")
+@if (GlobalHelper.DefaultCulture != GlobalHelper.CurrentCulture)
+{
+    <script src="@Url.GetScript("jquery.validate.extension.js")" defer></script>
+}
+
+<script>
+    GeoLocalizationLoadFunctions();
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX5ko0X7d8baaQBV2QIHhHclBeY_1rC6k&libraries=places" async defer></script>

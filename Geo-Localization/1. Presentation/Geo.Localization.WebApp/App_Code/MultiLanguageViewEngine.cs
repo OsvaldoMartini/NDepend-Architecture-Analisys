@@ -23,10 +23,10 @@ namespace Geo.Localization.WebApp
         {
             _currentCulture = lang;
             ICollection<string> arViewLocationFormats =
-                new string[] { "~/Views/{1}/" + lang + "/{0}.cshtml" };
+                new string[] { "~/Category/{1}/" + lang + "/{0}.cshtml" };
             ICollection<string> arBaseViewLocationFormats = new string[] { 
-                @"~/Views/{1}/{0}.cshtml", 
-                @"~/Views/Shared/{0}.cshtml"};
+                @"~/Category/{1}/{0}.cshtml",
+                @"~/Category/Shared/{0}.cshtml"};
             this.ViewLocationFormats = arViewLocationFormats.Concat(arBaseViewLocationFormats).ToArray();
         }
 

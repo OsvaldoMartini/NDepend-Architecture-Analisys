@@ -22,7 +22,9 @@ namespace Geo.Localization.WebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new MultiLanguageViewEngine());  
+            ViewEngines.Engines.Add(new MultiLanguageViewEngine());
+            //ViewEngines.Engines.Add(new WebFormViewEngine());
+
         }
     }
 }

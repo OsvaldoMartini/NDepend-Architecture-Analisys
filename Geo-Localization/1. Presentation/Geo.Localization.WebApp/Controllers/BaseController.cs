@@ -36,7 +36,7 @@ namespace Geo.Localization.WebApp.Controllers
             SetCurrentCultureOnThread(culture);
             if (culture != MultiLanguageViewEngine.CurrentCulture)
             {
-                (ViewEngines.Engines[0] as MultiLanguageViewEngine).SetCurrentCulture(culture);
+                (ViewEngines.Engines[1] as MultiLanguageViewEngine).SetCurrentCulture(culture);
             }
             base.OnActionExecuting(filterContext);
 
