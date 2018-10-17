@@ -15,11 +15,9 @@ namespace Geo.Localization.WebApp.App_Start
                 "~/Views/Shared/{0}.master"
             };
             ViewLocationFormats = new[] {
-                "~/Views/{1}/{0}.aspx",
-                "~/Views/{1}/{0}.ascx",
+                "~/Views/{1}/{0}.cshtml",
+                "~/Views/Shared/{0}.cshtml",
                 "~/Category/{1}/{0}.cshtml",
-                "~/Views/Shared/{0}.aspx",
-                "~/Views/Shared/{0}.ascx",
                 "~/Category/Shared/{0}.cshtml"
             };
         
