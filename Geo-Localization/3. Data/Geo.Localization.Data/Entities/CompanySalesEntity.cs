@@ -14,9 +14,10 @@ namespace Geo.Localization.Data
         }
 
         public int CompanySalesID { get; set; }
-        public int Year { get; set; }
-        public string Month { get; set; }
-        public double Sales { get; set; }
+        public int CompanyID { get; set; }
+        public int SalesYear { get; set; }
+        public string SalesMonth { get; set; }
+        public double TotalSales { get; set; }
         public Nullable<DateTime> DateCreated { get; set; }
 
         public virtual CompanyEntity TCompany { get; set; }

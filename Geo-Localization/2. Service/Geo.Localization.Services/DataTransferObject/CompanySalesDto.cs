@@ -16,18 +16,20 @@ namespace Geo.Localization.Services.DataTransferObject
         
         [DataMember]
         public int CompanySalesID { get; set; }
+        [DataMember]
+        public int CompanyID { get; set; }
 
         [DataMember]
-        [Display(Name = "Year")]
-        public int Year { get; set; }
+        [Display(Name = "SalesYear")]
+        public int SalesYear { get; set; }
 
         [DataMember]
-        [Display(Name = "Month")]
-        public string Month { get; set; }
+        [Display(Name = "SalesMonth")]
+        public string SalesMonth { get; set; }
         
         [DataMember]
-        [Display(Name = "Sales")]
-        public double Sales { get; set; }
+        [Display(Name = "TotalSales")]
+        public double TotalSales { get; set; }
         
         [DataType(DataType.Date)]
         [Display(Name = "Date Created")]

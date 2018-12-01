@@ -105,9 +105,9 @@ namespace Geo.Localization.Data.Repository
                 listCorpSalesByType.Add(new CompanySalesEntity()
                  {
                      CompanySalesID = 35 - loop + 1,
-                     Year = yearRange,
-                     Month = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(monthRange),
-                     Sales = salesRange,
+                     SalesYear = yearRange,
+                     SalesMonth = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(monthRange),
+                     TotalSales = salesRange,
                      DateCreated = DateTime.Now.AddYears(-5),
                      TCompany = listCompanies[companyRange-1]
                  });
