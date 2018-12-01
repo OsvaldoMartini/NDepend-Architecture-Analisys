@@ -10,13 +10,13 @@ using MySql.Data.MySqlClient;
 
 namespace Geo.Localization.Data.Repository
 {
-    public class CompanySalesRepository : GenericRepository<CompanySalesEntity>, ICompanySalesRepository
+    public class CompanySaleRepository : GenericRepository<CompanySaleEntity>, ICompanySaleRepository
     {
          /// <summary>
         /// Método responsável por simular a carga de dados;
         /// </summary>
         /// <returns></returns>
-        public List<CompanySalesEntity> GetCorpSalesByType(string typeCompany)
+        public List<CompanySaleEntity> GetCorpSaleByType(string typeCompany)
          {
              List<CompanyEntity> listCompanies = new List<CompanyEntity>()
              {
@@ -35,7 +35,7 @@ namespace Geo.Localization.Data.Repository
              {
                  List<CompanyEntity> list = listCompanies.Where(v => v.CompanyType.Equals(typeCompany)).ToList();
                  if (list.Count == 0)
-                     return new List<CompanySalesEntity>();
+                     return new List<CompanySaleEntity>();
 
                  Array.Resize(ref companies, list.Count);
                  for (int x=0; x <= list.Count-1; x++)
@@ -50,12 +50,12 @@ namespace Geo.Localization.Data.Repository
              var years = new int[] { 2012, 2013, 2014, 2015, 2016, 2017, 2018 };
              var deckYears = CreateShuffledDeck(years);
 
-             var sales = new int[] { 10, 11, 12, 13, 14, 15, 16, 17, 18 ,19, 22, 25 ,28};
-             var deckSales = CreateShuffledDeck(sales);
+             var sale = new int[] { 10, 11, 12, 13, 14, 15, 16, 17, 18 ,19, 22, 25 ,28};
+             var deckSale = CreateShuffledDeck(sale);
 
 
 
-            List<CompanySalesEntity> listCorpSalesByType = new List<CompanySalesEntity>();
+            List<CompanySaleEntity> listCorpSaleByType = new List<CompanySaleEntity>();
 
              int loop = 35;
             while (loop > 0)
@@ -90,24 +90,24 @@ namespace Geo.Localization.Data.Repository
                     yearRange = deckYears.Pop();
                 }
 
-                var salesRange = -1;
-                if (deckSales.Count > 0)
-                    salesRange = deckSales.Pop();
+                var saleRange = -1;
+                if (deckSale.Count > 0)
+                    saleRange = deckSale.Pop();
                 else
                 {
                     //Refil deckCompanies
-                    deckSales = CreateShuffledDeck(sales);
-                    salesRange = deckSales.Pop();
+                    deckSale = CreateShuffledDeck(sale);
+                    saleRange = deckSale.Pop();
                 }
 
 
 
-                listCorpSalesByType.Add(new CompanySalesEntity()
+                listCorpSaleByType.Add(new CompanySaleEntity()
                  {
-                     CompanySalesID = 35 - loop + 1,
-                     SalesYear = yearRange,
-                     SalesMonth = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(monthRange),
-                     TotalSales = salesRange,
+                     CompanySaleID = 35 - loop + 1,
+                     SaleYear = yearRange,
+                     SaleMonth = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(monthRange),
+                     TotalSale = saleRange,
                      DateCreated = DateTime.Now.AddYears(-5),
                      TCompany = listCompanies[companyRange-1]
                  });
@@ -116,7 +116,7 @@ namespace Geo.Localization.Data.Repository
 
             }
 
-             return listCorpSalesByType;
+             return listCorpSaleByType;
         }
 
         private Stack<T> CreateShuffledDeck<T>(IEnumerable<T> values)

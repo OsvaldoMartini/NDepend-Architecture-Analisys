@@ -2,7 +2,7 @@
 
 namespace Geo.Localization.Data
 {
-    public partial class CompanySalesEntity : BaseBO
+    public partial class CompanySaleEntity : BaseBO
     {
         public override void Validation()
         {

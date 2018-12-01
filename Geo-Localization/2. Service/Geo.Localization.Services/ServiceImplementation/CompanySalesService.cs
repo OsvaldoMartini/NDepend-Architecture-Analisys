@@ -16,7 +16,7 @@ namespace Geo.Localization.Services.ServiceImplementation
     {
         #region Primitive Properties
 
-        private readonly ICompanySalesRepository _companySalesRepository;
+        private readonly ICompanySaleRepository _companySalesRepository;
 
         #endregion
 
@@ -25,10 +25,10 @@ namespace Geo.Localization.Services.ServiceImplementation
         public CompanySalesService()
         {
             //Mapper DTOs -> BOs  and BOs -> DTOS
-            //Mapper.CreateMap<CompanySalesDto, CompanySalesEntity>();
-            //Mapper.CreateMap<CompanySalesEntity, CompanySalesDto>();
+            //Mapper.CreateMap<CompanySaleDto, CompanySaleEntity>();
+            //Mapper.CreateMap<CompanySaleEntity, CompanySaleDto>();
             ModelMapper.Configure();
-            _companySalesRepository = new CompanySalesRepository();
+            _companySalesRepository = new CompanySaleRepository();
         }
 
         #endregion
@@ -48,13 +48,13 @@ namespace Geo.Localization.Services.ServiceImplementation
             // free native resources if there are any.
         }
 
-        public List<CompanySalesDto> GetCompanySaleByType(string typeCompany)
+        public List<CompanySaleDto> GetCompanySaleByType(string typeCompany)
         {
-            List<CompanySalesEntity> companiesSales = _companySalesRepository.GetCorpSalesByType(typeCompany);
+            List<CompanySaleEntity> companiesSales = _companySalesRepository.GetCorpSaleByType(typeCompany);
 
-            return Mapper.Map<List<CompanySalesEntity>, List<CompanySalesDto>>(companiesSales);
+            return Mapper.Map<List<CompanySaleEntity>, List<CompanySaleDto>>(companiesSales);
             
-            //return Mapper.Map<CompanySalesEntity, CompanySalesDto > (companiesSales);
+            //return Mapper.Map<CompanySaleEntity, CompanySaleDto > (companiesSales);
         }
       
     }

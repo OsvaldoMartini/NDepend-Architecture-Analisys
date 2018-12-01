@@ -59,20 +59,20 @@ namespace Geo.Localization.Services.Utils
 
                    #region [ CompanySales ]
 
-                    Mapper.CreateMap<CompanySalesDto, CompanySalesEntity>()
+                    Mapper.CreateMap<CompanySaleDto, CompanySaleEntity>()
                         .ForMember(dest => dest.TCompany,
                             opt => opt.MapFrom(src => src.TCompany));
 
-                    Mapper.CreateMap<CompanySalesEntity, CompanySalesDto>()
-                        .ForMember(dest => dest.CompanySalesList,
-                            opt => opt.MapFrom<ICollection<CompanySalesEntity>>(src => src.CompanySalesList))
+                    Mapper.CreateMap<CompanySaleEntity, CompanySaleDto>()
+                        .ForMember(dest => dest.CompanySaleList,
+                            opt => opt.MapFrom<ICollection<CompanySaleEntity>>(src => src.CompanySaleList))
                         .ForMember(dest => dest.TCompany,
                             opt => opt.MapFrom(src => src.TCompany))
                         .ForMember(dest => dest.RoleName, opt => opt.Ignore())
                         .ForMember(dest => dest.NameUserRole, opt => opt.Ignore());
 
-                    Mapper.CreateMap<IList<CompanySalesEntity>, IList<CompanySalesDto>>();
-                    Mapper.CreateMap<IList<CompanySalesDto>, IList<CompanySalesEntity>>();
+                    Mapper.CreateMap<IList<CompanySaleEntity>, IList<CompanySaleDto>>();
+                    Mapper.CreateMap<IList<CompanySaleDto>, IList<CompanySaleEntity>>();
                     #endregion
 
 
