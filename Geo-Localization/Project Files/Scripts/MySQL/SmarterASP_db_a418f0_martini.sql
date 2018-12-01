@@ -12,7 +12,7 @@ FLUSH PRIVILEGES;
 
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `db_a418f0_martini`.`GeoEmployee`;
-DROP TABLE IF EXISTS `db_a418f0_martini`.`GeoCompanySales`;
+DROP TABLE IF EXISTS `db_a418f0_martini`.`GeoCompanySale`;
 DROP TABLE IF EXISTS `db_a418f0_martini`.`GeoCompany`;
 DROP TABLE IF EXISTS `db_a418f0_martini`.`GeoLocalization`;
 DROP procedure IF EXISTS `PROC_DELETE_Geolocalization`;
@@ -47,17 +47,17 @@ CONSTRAINT PK_GeoCompany PRIMARY KEY CLUSTERED
 ;
 
 
-/****** Object:  Table GeoCompanySales    Script Date: 08/07/2017 09:07:02 ******/
-CREATE TABLE GeoCompanySales(
-	CompanySalesID int AUTO_INCREMENT NOT NULL,
+/****** Object:  Table GeoCompanySale    Script Date: 08/07/2017 09:07:02 ******/
+CREATE TABLE GeoCompanySale(
+	CompanySaleID int AUTO_INCREMENT NOT NULL,
 	CompanyID int NOT NULL,
-	SalesYear int NOT NULL,
-	SalesMonth int NOT NULL,
-	SalesTotal Decimal(10,2) NOT NULL,
+	SaleYear int NOT NULL,
+	SaleMonth int NOT NULL,
+	TotalSale Decimal(10,2) NOT NULL,
 	DateCreated datetime NULL,
-CONSTRAINT PK_CompanySales PRIMARY KEY CLUSTERED 
+CONSTRAINT PK_GeoCompanySale PRIMARY KEY CLUSTERED 
 (
-	CompanySalesID ASC
+	CompanySaleID ASC
 )
 )
 ;
