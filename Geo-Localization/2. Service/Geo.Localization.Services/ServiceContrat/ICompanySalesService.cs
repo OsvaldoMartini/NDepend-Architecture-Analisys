@@ -8,6 +8,6 @@ namespace Geo.Localization.Services.ServiceContrat
     public interface ICompanySalesService
     {
         [OperationContract]
-        List<CompanySalesDto> GetCompanySaleByType(string typeCompany);
+        List<CompanySaleDto> GetCompanySaleByType(string typeCompany);
     }
 }

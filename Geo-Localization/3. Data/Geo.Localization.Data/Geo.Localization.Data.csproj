@@ -78,10 +78,10 @@
     <Compile Include="IRepository\ICompanyRepository.cs" />
     <Compile Include="IRepository\IGeoLocalizationRepository.cs" />
     <Compile Include="IRepository\IEmployeeRepository.cs" />
-    <Compile Include="IRepository\ICompanySalesRepository.cs" />
+    <Compile Include="IRepository\ICompanySaleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CompanyRepository.cs" />
-    <Compile Include="Repository\CompanySalesRepository.cs" />
+    <Compile Include="Repository\CompanySaleRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
     <Compile Include="Repository\GeoLocalizationRepository.cs" />
     <Compile Include="Utils\BaseBO.cs" />

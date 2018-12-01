@@ -6,30 +6,30 @@ using System.Runtime.Serialization;
 namespace Geo.Localization.Services.DataTransferObject
 {
     [DataContract(Name = "CompanySales")]
-    public class CompanySalesDto : BaseAccessDto
+    public class CompanySaleDto : BaseAccessDto
     {
-        public CompanySalesDto()
+        public CompanySaleDto()
         {
             this.TCompany = new CompanyDto();
-            this.CompanySalesList = new HashSet<CompanySalesDto>();
+            this.CompanySaleList = new HashSet<CompanySaleDto>();
         }
         
         [DataMember]
-        public int CompanySalesID { get; set; }
+        public int CompanySaleID { get; set; }
         [DataMember]
         public int CompanyID { get; set; }
 
         [DataMember]
-        [Display(Name = "SalesYear")]
-        public int SalesYear { get; set; }
+        [Display(Name = "SaleYear")]
+        public int SaleYear { get; set; }
 
         [DataMember]
-        [Display(Name = "SalesMonth")]
-        public string SalesMonth { get; set; }
+        [Display(Name = "SaleMonth")]
+        public string SaleMonth { get; set; }
         
         [DataMember]
-        [Display(Name = "TotalSales")]
-        public double TotalSales { get; set; }
+        [Display(Name = "TotalSale")]
+        public double TotalSale { get; set; }
         
         [DataType(DataType.Date)]
         [Display(Name = "Date Created")]
@@ -39,7 +39,7 @@ namespace Geo.Localization.Services.DataTransferObject
         public virtual CompanyDto TCompany { get; set; }
 
         [DataMember]
-        public virtual ICollection<CompanySalesDto> CompanySalesList { get; set; }
+        public virtual ICollection<CompanySaleDto> CompanySaleList { get; set; }
 
     }
 }

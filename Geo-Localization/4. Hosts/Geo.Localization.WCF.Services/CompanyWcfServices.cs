@@ -25,7 +25,7 @@ namespace Geo.Localization.WCF.Services
             return $"You entered: {value}";
         }
 
-        public List<CompanySalesDto> Backend(string sector)
+        public List<CompanySaleDto> Backend(string sector)
         {
             CompanySalesService _companySalesService = new CompanySalesService();
 
