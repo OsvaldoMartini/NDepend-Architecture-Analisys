@@ -12,8 +12,8 @@ namespace Geo.Localization.Data.Repository
 {
     public class CompanySaleRepository : GenericRepository<CompanySaleEntity>, ICompanySaleRepository
     {
-         /// <summary>
-        /// Método responsável por simular a carga de dados;
+        /// <summary>
+        /// Method responsible for simulating data load;
         /// </summary>
         /// <returns></returns>
         public List<CompanySaleEntity> GetCorpSaleByType(string typeCompany)
@@ -125,7 +125,7 @@ namespace Geo.Localization.Data.Repository
 
             var list = new List<T>(values);
             var stack = new Stack<T>();
-
+             
             while (list.Count > 0)
             {
                 // Get the next item at random.
